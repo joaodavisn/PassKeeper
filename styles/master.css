@@ -1,0 +1,214 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+button {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: solid rgb(80, 223, 115);
+    transition: 400ms;
+}
+
+.passkeeper {
+    width: 557px;
+    height: fit-content;
+    margin: 4rem;
+}
+
+.passkeeper-nav {
+    width: 100%;
+    height: 68px;
+    background-color: #1F6B4B;
+    border-radius: 30px 30px 0px 0px;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+}
+
+.title {
+    color: #fff;
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+.passkeeper-keys {
+    width: 100%;
+    height: auto;
+    background-color: #1B553C;
+    border-radius: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1B553C;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1F6B4B;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #34B17D;
+  }
+
+.key {
+    width: 93%;
+    height: 61px;
+    margin: 1rem auto 0;
+}
+
+.key-title {
+    width: 100%;
+    height: 20px;
+    background-color: #239062;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+
+.website-name {
+    margin: 0 0.6rem;
+    color: #fff;
+}
+
+
+.key-data {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5FEAAF;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.key-itself {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.key-holder {
+    height: 1.3rem;
+    width: 85%;
+    background-color: #34B17D;
+    color: #fff;
+    border: none;
+    margin: 0rem 0.2rem;
+    border-radius: 7px;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+.btn {
+    height: 1.4rem;
+    width: 1.4rem;
+    border: none;
+    margin: 0rem 0.2rem;
+    background-color: #34B17D;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.footer-nav {
+    height: 5rem;
+    background-color: #1F6B4B;
+    border-radius: 0px 0px 25px 25px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.add-btn {
+    border: none;
+    width: 52px;
+    height: 52px;
+    background-color: #34B17D;
+    border-radius: 15px;
+    margin: 0.7rem;
+    color: transparent;  
+    text-shadow: 0 0 0 rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+.add-main {
+    width: 80%;
+}
+
+.add-key-title {
+    height: 25px;
+    background-color: #239062;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.add-key-data {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5FEAAF;
+    border-radius: 0px 0px 15px 15px;
+    padding: 0 0.8rem;
+}
+
+.add-key-itself {
+    height: 1.3rem;
+    width: 85%;
+    background-color: #34B17D;
+    color: #fff;
+    border: none;
+    margin: 0rem 0.2rem;
+    border-radius: 7px;
+}
+
+.add-website-name {
+    background-color:transparent;
+    border: none;
+    margin: 0rem 1.8rem;
+    padding:0;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    width: 120px;
+    height: 20px;
+}
+
+.add-website-name::placeholder{
+    color: rgba(255, 255, 255, 0.411);
+}
+
+.iconsizer {
+    width: 1rem;
+    margin: 3px 0 0 1px;
+}
+
+button {
+    padding: 0;
+}

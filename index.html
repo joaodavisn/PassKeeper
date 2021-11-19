@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="images/x-icon">
+    <link rel="stylesheet" href="./styles/master.css">
+    <link rel="stylesheet" href="./styles/setup.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="passkeeper">
+        <div class="passkeeper-nav">
+            <h1 class="title">PassKeeper - By DeltaDev</h1>
+        </div>
+        <div class="passkeeper-keys">
+            <div class="key" id="duplicater">
+                <div class="key-title">
+                    <h1 class="website-name" id="sitename">WebSite Name</h1>
+                </div>
+                <div class="key-data">
+                    <div class="key-holder">
+                        <input type="password" value="" class="key-itself" id="password-value" readonly="readonly">
+                    </div>
+                    <button class="iconbtn btn hide-show"><img src="./images/visibility_off_white_24dp.svg" class="iconsizer"></button>
+                    <button class="iconbtn btn copy-key"><img src="./images/content_copy_white_24dp.svg" class="iconsizer"></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <div class="add-main">
+                <div class="add-key-title">
+                    <input class="add-website-name" placeholder="WebSite Name"></input>
+                </div>
+                    <div class="add-key-data">
+                        <input type="password" name="" class="add-key-itself" id="keyvalue">
+                        <button class="iconbtn btn hide-show"><img src="./images/visibility_off_white_24dp.svg" class="iconsizer"></button>
+                    </div>
+                </div>
+                <input type="button" value="➕" class="add-btn" id="button" onclick="duplicate()">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./scripts/master.js"></script>
+</body>
+</html>
