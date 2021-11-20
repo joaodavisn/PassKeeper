@@ -212,3 +212,41 @@ input:focus, textarea:focus, select:focus, button:focus {
 button {
     padding: 0;
 }
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    background-color: #1F6B4B;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 10%;
+    margin-left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    outline: #ffffff solid;
+    outline-width: 1px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
