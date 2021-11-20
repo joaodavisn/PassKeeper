@@ -120,6 +120,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     color: #fff;
     background-color: transparent;
     border: none;
+    width: 95%;
 }
 
 
@@ -192,12 +193,12 @@ input:focus, textarea:focus, select:focus, button:focus {
 .add-website-name {
     background-color:transparent;
     border: none;
-    margin: 0rem 1.8rem;
+    margin: 0rem 1.9rem;
     padding:0;
     background-color: transparent;
     color: #fff;
     border-radius: 5px;
-    text-align: center;
+    text-align: left;
     width: 120px;
     height: 20px;
 }
@@ -208,7 +209,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 
 .iconsizer {
     width: 1rem;
-    margin: 3px 0 0 1px;
+    margin: 3px 0 0 0px;
 }
 
 button {

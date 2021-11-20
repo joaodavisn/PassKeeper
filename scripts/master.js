@@ -62,8 +62,11 @@ function footervisiblepass() {
 
   if (passwordcontent.type === "password") {
     passwordcontent.type = "text";
+    document.getElementById("eyeid2").src = "./images/visibility_white_24dp.svg";
   } else {
     passwordcontent.type = "password";
+    document.getElementById("eyeid2").src =
+      "./images/visibility_off_white_24dp.svg";
   }
   event.preventDefault();
 }
