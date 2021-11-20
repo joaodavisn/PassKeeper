@@ -1,24 +1,35 @@
 let original = document.getElementById('duplicater');
 let i = 0;
-let j = 0;
-// let originalb = document.getElementById('sitename');
-
 
 function duplicate() {
-    let clone = original.cloneNode(true); // "deep" clone
-    clone.id = "duplicater" + (i++);
-    // or clone.id = ""; if the divs don't need an ID
-    original.parentNode.appendChild(clone);
-    let originalkey = document.getElementById('password-value').id;
-    let newkey = originalkey + (j++);
-    console.log(newkey)
-    document.querySelector('#password-value').id = newkey;
+
+    const input = document.querySelector('#keyvalue').value;
+    const container = document.querySelector('.passkeeper-keys');
+    const sitenameval = document.querySelector('.add-website-name').value;
+    container.innerHTML += `
+    <div class="key" id="${container.childElementCount}">
+    <div class="key-title">
+        <h1 class="website-name" id="sitename">${sitenameval}</h1>
+    </div>
+    <div class="key-data">
+        <div class="key-holder">
+            <input type="password" class="key-itself" readonly="readonly" value="${input}">
+        </div>
+        <button class="iconbtn btn hide-show"><img src="./images/visibility_off_white_24dp.svg" class="iconsizer"></button>
+        <button class="iconbtn btn copy-key"><img src="./images/content_copy_white_24dp.svg" class="iconsizer"></button>
+    </div>
+    </div>
+    `
+    function isEmpty(str) {
+        return !str.trim().length;
+    }
+
+
+    if (isEmpty (document.getElementById('keyvalue').value)){alert("The password cannot be empty.")};
+    if (isEmpty (document.querySelector('.add-website-name').value)){alert("The website name cannot be empty.")};
+
+    
+    document.getElementById('keyvalue').value="";
+    document.querySelector('.add-website-name').value="";
 }
 
-
-// var x = document.getElementById("keyvalue").value;
-// let passwordid = document.getElementById("password-value").id;
-// passwordid = passwordid;
-// console.log(passwordid);
-// document.getElementById("password-value").id = passwordid;
-// // document.getElementById("demo").innerHTML = x;
