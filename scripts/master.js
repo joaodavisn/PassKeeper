@@ -1,78 +1,69 @@
-
-
-
+const keybox = document.querySelector(".passkeeper-keys");
+let unikey = "";
 
 function newkey() {
-    const input = document.querySelector('#keyvalue').value;
-    const container = document.querySelector('.passkeeper-keys');
-    const sitenameval = document.querySelector('.add-website-name').value;
-    let calc = container.childElementCount;
-    console.log (calc);
-    container.innerHTML += `
+  let unikey = `unikey${(keybox.childElementCount += 1)}`;
+  const input = document.querySelector("#keyvalue").value;
+  const container = document.querySelector(".passkeeper-keys");
+  const sitenameval = document.querySelector(".add-website-name").value;
+  container.innerHTML += `
     <div class="key" id="${container.childElementCount}">
-    <div class="key-title">
-        <h1 class="website-name" id="sitename">${sitenameval}</h1>
-    </div>
-    <div class="key-data">
-        <div class="key-holder">
-            <input type="password" class="key-itself" readonly="readonly" id="myInput" value="${input}">
+        <div class="key-title">
+            <h1 class="website-name" id="sitename">${sitenameval}</h1>
         </div>
-        <button class="iconbtn btn hide-show" onclick="visiblepass()"><img src="./images/visibility_off_white_24dp.svg" class="iconsizer"></button>
-        <div class="tooltip">
-        <button class="iconbtn btn copy-key" onclick="copykey()" onmouseout="outFunc()"><img src="./images/content_copy_white_24dp.svg" class="iconsizer">
-        <span class="tooltiptext" id="myTooltip">Copy key</span>
-        </button>
+        <div class="key-data">
+            <div class="key-holder">
+                <input type="password" class="key-itself" readonly="readonly" id="${unikey}" value="${input}">
+            </div>
+
+            <button class="iconbtn btn hide-show" type="button" onclick="visiblepass(${unikey})"><img src="./images/visibility_off_white_24dp.svg" class="iconsizer" id="eyeid"></button>
+            <div class="tooltip">
+            <button class="iconbtn btn copy-key" type="button" onclick="copykey(${unikey})"><img src="./images/content_copy_white_24dp.svg" class="iconsizer">
+
+            </button>
+            </div>
         </div>
     </div>
-    </div>
-    `
-    function isEmpty(str) {
-        return !str.trim().length;
-    }
+    `;
 
+  function isEmpty(str) {
+    return !str.trim().length;
+  }
 
-    if (isEmpty (document.getElementById('keyvalue').value)){alert("The password cannot be empty.")};
-    if (isEmpty (document.querySelector('.add-website-name').value)){alert("The website name cannot be empty.")};
+  if (isEmpty (document.getElementById('keyvalue').value) ||
+  isEmpty (document.querySelector('.add-website-name').value)){
+      alert("The fields cannot be empty.");
+    };
 
-
-    document.getElementById('keyvalue').value="";
-    document.querySelector('.add-website-name').value="";
+  document.getElementById("keyvalue").value = "";
+  document.querySelector(".add-website-name").value = "";
 }
 
+function copykey(unikey) {
+  unikey.select();
+  unikey.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(unikey.value);
+}
 
-function visiblepass() {
-    let passwordcontent = document.querySelector(".key-itself");
+function visiblepass(unikey) {
+  if (unikey.type === "password") {
+    unikey.type = "text";
+    document.getElementById("eyeid").src = "./images/visibility_white_24dp.svg";
+  } else {
+    unikey.type = "password";
+    document.getElementById("eyeid").src =
+      "./images/visibility_off_white_24dp.svg";
+  }
 
-    if (passwordcontent.type === "password") {
-        passwordcontent.type = "text";
-    }
-    else {passwordcontent.type = "password"}
-    event.preventDefault();
 }
 
 function footervisiblepass() {
-    let passwordcontent = document.querySelector(".add-key-itself");
+  let passwordcontent = document.querySelector(".add-key-itself");
 
-    if (passwordcontent.type === "password") {
-        passwordcontent.type = "text";
-    }
-    else {passwordcontent.type = "password"}
-    event.preventDefault();
-
+  if (passwordcontent.type === "password") {
+    passwordcontent.type = "text";
+  } else {
+    passwordcontent.type = "password";
+  }
+  event.preventDefault();
 }
-
-function copykey() {
-    var copyText = document.getElementById("myInput");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-    
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied!";
-    event.preventDefault();
-  }
-  
-  function outFunc() {
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy key";
-  }

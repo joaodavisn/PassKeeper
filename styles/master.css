@@ -104,15 +104,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     border-radius: 0px 0px 10px 10px;
 }
 
-.key-itself {
-    color: #fff;
-    background-color: transparent;
-    border: none;
-}
-
 .key-holder {
     height: 1.3rem;
-    width: 85%;
+    width: 95%;
     background-color: #34B17D;
     color: #fff;
     border: none;
@@ -121,6 +115,14 @@ input:focus, textarea:focus, select:focus, button:focus {
     padding-top: 4px;
     padding-left: 6px;
 }
+
+.key-itself {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+
 
 .btn {
     height: 1.4rem;
@@ -213,40 +215,3 @@ button {
     padding: 0;
 }
 
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 60px;
-    background-color: #1F6B4B;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 1px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 10%;
-    margin-left: -20px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    outline: #ffffff solid;
-    outline-width: 1px;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
